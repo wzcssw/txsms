@@ -16,4 +16,9 @@ func main() {
 	fmt.Println(r)
 	fmt.Println(e)
 	fmt.Println("----------- End -----------")
+	fmt.Println("---------- Start2 ----------")
+	r2, e2 := api.SmsTplSend(yunpian.SMSTplSendInfo{Tpl_ID: 1744884, Mobile: "18648552460", Tpl_Value: "#patient_name#=王志成"})
+	fmt.Println(r2)
+	fmt.Println(e2)
+	fmt.Println("----------- End2 -----------")
 }
