@@ -1,6 +1,7 @@
 package main
 
 import (
+	"net/http"
 	"txsms/apis"
 
 	"github.com/labstack/echo"
@@ -14,6 +15,10 @@ import (
 
 func main() {
 	e := echo.New()
+
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Hello, txsms!")
+	})
 
 	// 使用模板发送
 	e.POST("/template", apis.Template)
