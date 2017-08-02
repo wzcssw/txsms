@@ -5,10 +5,14 @@ import (
 	"strconv"
 
 	"github.com/labstack/echo"
+	"github.com/shesuyo/yunpian"
 )
 
 // YunpianKey YunpianKey
 var YunpianKey = "b92ee0b369f4749409bdb76bd2d13776"
+
+// APIInstance APIInstance
+var APIInstance *yunpian.YunpianAPI
 
 // FloatToString  to convert a float number to a string
 func FloatToString(inputnum float64) string {

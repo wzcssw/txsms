@@ -45,8 +45,7 @@ func Template(c echo.Context) error {
 	// 解析JSON end
 
 	// 发送到云片
-	api := yunpian.NewYunpianAPI(tools.YunpianKey)
-	_, e := api.SmsTplSend(yunpian.SMSTplSendInfo{Tpl_ID: tplIDInt, Mobile: mobile, Tpl_Value: tempString})
+	_, e := tools.APIInstance.SmsTplSend(yunpian.SMSTplSendInfo{Tpl_ID: tplIDInt, Mobile: mobile, Tpl_Value: tempString})
 	if e != nil {
 		return tools.ReturnJSONResult(c, false, "", e)
 	}
