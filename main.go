@@ -20,7 +20,7 @@ func main() {
 	tools.APIInstance = yunpian.NewYunpianAPI(tools.YunpianKey)
 
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, txsms!")
+		return c.String(http.StatusOK, "Hello, txsms! 2")
 	})
 
 	// 使用模板发送
